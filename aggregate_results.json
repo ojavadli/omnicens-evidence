@@ -1,0 +1,303 @@
+{
+  "authors": [
+    "Orkhan Javadli",
+    "Anni Zimina"
+  ],
+  "caveats": [
+    "Teacher agreement is not human-verified accuracy.",
+    "No quality parity, tenfold efficiency, million-profile experimental result, or statistical significance is established.",
+    "These are sequential TRAIN-stream evaluations; predictions were frozen before the corresponding teacher dispatch. Earlier evaluated references enter the next training round.",
+    "The two rounds are disjoint and must not be pooled as one fixed-model evaluation.",
+    "A person is the sampling unit; decisions within a person are not independent samples.",
+    "Unknown references are reported separately. Answering them does not by itself establish factual error.",
+    "Observed source delivery and schema validation do not certify teacher semantic-policy conformance, attention, or correctness.",
+    "Training and evaluation teacher conditions differ; changes across rounds do not isolate a causal model-effort or learning effect.",
+    "Timing is a local observed measurement, not an end-to-end speedup comparison."
+  ],
+  "evaluation_teacher": "Grok 4.7 High Fast",
+  "evidence_scope": "Aggregate results only; no individual records, inputs, predictions, field names or implementation details.",
+  "measured_compute": [
+    {
+      "includes_teacher_or_input_encoding": false,
+      "operation": "Additional local adaptation preceding round 2",
+      "process_tree_CPU_seconds": 5.319096999999999,
+      "wall_seconds": 27.146558667
+    }
+  ],
+  "project_title": "OmniCens: Self-Improving Distillation for Multimodal Classification of Millions of Profiles",
+  "rounds": [
+    {
+      "eligible_decisions": 5766,
+      "metrics": [
+        {
+          "agreement_when_answered": 0.5708418891170431,
+          "answered_known": 487,
+          "answered_unknown": 5267,
+          "correct_known": 278,
+          "known_agreement": 0.5708418891170431,
+          "known_coverage": 1.0,
+          "predictor": "Cold adaptation",
+          "selective_output": false,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.5913978494623656,
+          "answered_known": 465,
+          "answered_unknown": 5229,
+          "correct_known": 275,
+          "known_agreement": 0.5646817248459959,
+          "known_coverage": 0.9548254620123203,
+          "predictor": "Cold adaptation",
+          "selective_output": true,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.5667351129363449,
+          "answered_known": 487,
+          "answered_unknown": 5267,
+          "correct_known": 276,
+          "known_agreement": 0.5667351129363449,
+          "known_coverage": 1.0,
+          "predictor": "Warm adaptation",
+          "selective_output": false,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.5870967741935483,
+          "answered_known": 465,
+          "answered_unknown": 5229,
+          "correct_known": 273,
+          "known_agreement": 0.5605749486652978,
+          "known_coverage": 0.9548254620123203,
+          "predictor": "Warm adaptation",
+          "selective_output": true,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.17453798767967146,
+          "answered_known": 487,
+          "answered_unknown": 5279,
+          "correct_known": 85,
+          "known_agreement": 0.17453798767967146,
+          "known_coverage": 1.0,
+          "predictor": "Earlier shared model",
+          "selective_output": false,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.44285714285714284,
+          "answered_known": 140,
+          "answered_unknown": 2144,
+          "correct_known": 62,
+          "known_agreement": 0.1273100616016427,
+          "known_coverage": 0.2874743326488706,
+          "predictor": "Earlier shared model",
+          "selective_output": true,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.6098562628336756,
+          "answered_known": 487,
+          "answered_unknown": 5279,
+          "correct_known": 297,
+          "known_agreement": 0.6098562628336756,
+          "known_coverage": 1.0,
+          "predictor": "Source learned model",
+          "selective_output": false,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.6098562628336756,
+          "answered_known": 487,
+          "answered_unknown": 5279,
+          "correct_known": 297,
+          "known_agreement": 0.6098562628336756,
+          "known_coverage": 1.0,
+          "predictor": "Source learned model",
+          "selective_output": true,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": null,
+          "answered_known": 0,
+          "answered_unknown": 0,
+          "correct_known": 0,
+          "known_agreement": 0.0,
+          "known_coverage": 0.0,
+          "predictor": "Always unknown",
+          "selective_output": false,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.5995893223819302,
+          "answered_known": 487,
+          "answered_unknown": 5279,
+          "correct_known": 292,
+          "known_agreement": 0.5995893223819302,
+          "known_coverage": 1.0,
+          "predictor": "Source prior baseline",
+          "selective_output": false,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        },
+        {
+          "agreement_when_answered": 0.5872689938398358,
+          "answered_known": 487,
+          "answered_unknown": 5267,
+          "correct_known": 286,
+          "known_agreement": 0.5872689938398358,
+          "known_coverage": 1.0,
+          "predictor": "Initial majority baseline",
+          "selective_output": false,
+          "teacher_known": 487,
+          "teacher_unknown": 5279
+        }
+      ],
+      "models_updated_between_pairs": false,
+      "people": 6,
+      "round": 1,
+      "teacher_known": 487,
+      "teacher_known_coverage": 0.08446063128685397,
+      "teacher_unknown": 5279,
+      "unavailable_decisions": 0
+    },
+    {
+      "additional_warm_training_comparison": {
+        "correct_known_gain": 9,
+        "denominator": 1816,
+        "difference_percentage_points": 0.4955947136563877,
+        "maximum_person_paired_difference_percentage_points": 3.0303030303030303,
+        "mean_person_paired_difference_percentage_points": 0.8996697872681034,
+        "minimum_person_paired_difference_percentage_points": -0.16155088852988692,
+        "statistical_significance_claimed": false
+      },
+      "eligible_decisions": 3844,
+      "metrics": [
+        {
+          "agreement_when_answered": 0.6674008810572687,
+          "answered_known": 1816,
+          "answered_unknown": 2020,
+          "correct_known": 1212,
+          "known_agreement": 0.6674008810572687,
+          "known_coverage": 1.0,
+          "predictor": "Held-fixed warm model",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        },
+        {
+          "agreement_when_answered": 0.6723568281938326,
+          "answered_known": 1816,
+          "answered_unknown": 2020,
+          "correct_known": 1221,
+          "known_agreement": 0.6723568281938326,
+          "known_coverage": 1.0,
+          "predictor": "Warm model after additional training",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        },
+        {
+          "agreement_when_answered": 0.6651982378854625,
+          "answered_known": 1816,
+          "answered_unknown": 2020,
+          "correct_known": 1208,
+          "known_agreement": 0.6651982378854625,
+          "known_coverage": 1.0,
+          "predictor": "Held-fixed cold model",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        },
+        {
+          "agreement_when_answered": 0.7031938325991189,
+          "answered_known": 1816,
+          "answered_unknown": 2028,
+          "correct_known": 1277,
+          "known_agreement": 0.7031938325991189,
+          "known_coverage": 1.0,
+          "predictor": "Source learned model",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        },
+        {
+          "agreement_when_answered": 0.09636563876651982,
+          "answered_known": 1816,
+          "answered_unknown": 2028,
+          "correct_known": 175,
+          "known_agreement": 0.09636563876651982,
+          "known_coverage": 1.0,
+          "predictor": "Fixed zero-shot baseline",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        },
+        {
+          "agreement_when_answered": 0.691079295154185,
+          "answered_known": 1816,
+          "answered_unknown": 2020,
+          "correct_known": 1255,
+          "known_agreement": 0.691079295154185,
+          "known_coverage": 1.0,
+          "predictor": "Initial majority baseline",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        },
+        {
+          "agreement_when_answered": 0.6998898678414097,
+          "answered_known": 1816,
+          "answered_unknown": 2020,
+          "correct_known": 1271,
+          "known_agreement": 0.6998898678414097,
+          "known_coverage": 1.0,
+          "predictor": "Updated majority baseline",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        },
+        {
+          "agreement_when_answered": 0.7020925110132159,
+          "answered_known": 1816,
+          "answered_unknown": 2028,
+          "correct_known": 1275,
+          "known_agreement": 0.7020925110132159,
+          "known_coverage": 1.0,
+          "predictor": "Source prior baseline",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        },
+        {
+          "agreement_when_answered": null,
+          "answered_known": 0,
+          "answered_unknown": 0,
+          "correct_known": 0,
+          "known_agreement": 0.0,
+          "known_coverage": 0.0,
+          "predictor": "Always unknown",
+          "selective_output": false,
+          "teacher_known": 1816,
+          "teacher_unknown": 2028
+        }
+      ],
+      "people": 4,
+      "round": 2,
+      "teacher_known": 1816,
+      "teacher_known_coverage": 0.4724245577523413,
+      "teacher_unknown": 2028,
+      "unavailable_decisions": 0
+    }
+  ],
+  "snapshot_date_utc": "2026-09-26"
+}
